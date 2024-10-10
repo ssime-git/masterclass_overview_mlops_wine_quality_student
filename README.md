@@ -72,7 +72,13 @@ You can start by getting familiar with the architecture of the project:
 ```
 Through this project we'll work with a wine dataset 🍷 The goal will be to implement a model that will predict its quality, all while adhering to the best practices in MLOps in terms of version control, use of pipelines and the most commonly used tools.
 
-First of all you need to start by forking and cloning the project. Then, you must create a virtual environment where you'll install all the necessary libraries. These can be found in the `requirements.txt` file 📚 Make sure you activate your virtual environment before you use it 😉
+## Project setup
+First of all you need to start by forking and cloning the project. Then, you will need to create a copy of the github repo within dagshub. This will allow you to use the version control system and the data version control system (DVC) to keep track of the changes you make to the project.
+
+Finally, you must create a virtual environment `.venv`where you'll install all the necessary libraries. These can be found in the `requirements.txt` file. 
+
+> 📚 Make sure you activate your virtual environment before you use it 😉.
+> If you have an error, you can remove the versions specified in the `requirements.txt` file.
 
 Now let's go through the files that are readily available.
 
@@ -123,6 +129,8 @@ Create the class `ConfigurationManager` in `src/config_manager.py` using the *St
 ⚠️ Pay attention to the `mlflow_uri` on the `get_model_evaluation_config`, make sure you adapt it with your own dagshub credentials. 
 
 ## Step 3: Data module definition and model module definition.
+
+### Data module definition
 Using the *Step 3* section of the notebook, in the corresponding files of the  `src/data_module_def` folder, create:
 
 1. Data Ingestion module 📥
@@ -143,6 +151,7 @@ This class will:
 * Split the data into training and test sets.
 * Save the corresponding csv files into the appropriate folder.
 
+### Model module definition
 Similarly, in the corresponding files of the `src/models_module_def` folder, create:
 
 1. Model trainer module 🏋️‍♂️
@@ -152,6 +161,8 @@ This class will:
 * Save the trained model into the appropriate folder.
 
 2. Model Evaluation module 📝
+
+Make sure to update the `repo_name`and `repo_name`in the `model_evaluation/py` file with your own dagshub credentials.
 
 This class will
 * Evaluate the model and log metrics using MLFlow
@@ -169,11 +180,14 @@ On each script you have to complete the classes with two methods: an `__init__` 
 
 ## Step 5: Use DVC to connect the different stages of your pipeline 🦉
 Start by setting DagsHub as your distant storage through DVC.
+> you can find the command to execute on dagshub account `remote > data > dvc >s3`
 
 ```bash
-dvc remote add origin s3://dvc
-dvc remote modify origin endpointurl https://dagshub.com/your_username/your_repo.s3 
-dvc remote default origin
+	dvc remote add origin s3://dvc --force
+	dvc remote modify origin endpointurl https://dagshub.com/ssime-git/masterclass_overview_mlops_wine_quality_student.s3
+	dvc remote default origin
+	dvc remote modify origin --local access_key_id <your_access_key_id>
+	dvc remote modify origin --local secret_access_key <your_secret_access_key>
 ```
 
 Use dvc to connect the different steps of your pipeline.

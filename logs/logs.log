@@ -107,3 +107,87 @@ Source-Age: 0
 2024-07-10 13:00:48,577 - custom_logger - INFO - yaml file: src\models_module_def\params.yaml loaded successfully
 2024-07-10 13:00:48,577 - custom_logger - INFO - yaml file: src\data_module_def\schema.yaml loaded successfully
 2024-07-10 13:00:48,577 - custom_logger - INFO - created directory at: models
+2024-10-10 19:05:04,450 - custom_logger - INFO - Custom logger module initialized.
+2024-10-10 19:05:06,914 - custom_logger - INFO - Parent folder: /Users/sebastiensime/Documents/masterclass_overview_mlops_wine_quality_student
+2024-10-10 19:05:06,914 - custom_logger - INFO - >>>>> stage Data Ingestion stage started <<<<<
+2024-10-10 19:05:06,915 - custom_logger - INFO - yaml file: src/config.yaml loaded successfully
+2024-10-10 19:05:06,916 - custom_logger - INFO - yaml file: src/models_module_def/params.yaml loaded successfully
+2024-10-10 19:05:06,916 - custom_logger - INFO - yaml file: src/data_module_def/schema.yaml loaded successfully
+2024-10-10 19:05:06,916 - custom_logger - INFO - created directory at: data/raw
+2024-10-10 19:05:07,496 - custom_logger - INFO - data/raw/data.zip download! With following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: D36A:13F70E:599E10:5CBC89:67080942
+Accept-Ranges: bytes
+Date: Thu, 10 Oct 2024 17:05:07 GMT
+Via: 1.1 varnish
+X-Served-By: cache-par-lfpg1960083-PAR
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1728579907.343777,VS0,VE162
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: fa8d734aa4fb997e936e96ff4f1b9a46348db6e5
+Expires: Thu, 10 Oct 2024 17:10:07 GMT
+Source-Age: 0
+
+
+2024-10-10 19:05:07,497 - custom_logger - INFO - >>>>> stage Data Ingestion stage completed <<<<<
+
+x=======x
+2024-10-10 19:05:07,634 - custom_logger - INFO - Custom logger module initialized.
+2024-10-10 19:05:16,240 - custom_logger - INFO - >>>>> stage Data Validation stage started <<<<<
+2024-10-10 19:05:16,241 - custom_logger - INFO - yaml file: src/config.yaml loaded successfully
+2024-10-10 19:05:16,241 - custom_logger - INFO - yaml file: src/models_module_def/params.yaml loaded successfully
+2024-10-10 19:05:16,242 - custom_logger - INFO - yaml file: src/data_module_def/schema.yaml loaded successfully
+2024-10-10 19:05:16,242 - custom_logger - INFO - created directory at: data
+2024-10-10 19:05:16,245 - custom_logger - INFO - >>>>> stage Data Validation stage completed <<<<<
+
+x=======x
+2024-10-10 19:05:16,353 - custom_logger - INFO - Custom logger module initialized.
+2024-10-10 19:05:29,002 - custom_logger - INFO - >>>>> stage Data Transformation stage started <<<<<
+2024-10-10 19:05:29,005 - custom_logger - INFO - yaml file: src/config.yaml loaded successfully
+2024-10-10 19:05:29,006 - custom_logger - INFO - yaml file: src/models_module_def/params.yaml loaded successfully
+2024-10-10 19:05:29,007 - custom_logger - INFO - yaml file: src/data_module_def/schema.yaml loaded successfully
+2024-10-10 19:05:29,007 - custom_logger - INFO - created directory at: data/processed
+2024-10-10 19:05:29,026 - custom_logger - INFO - Splitted data into training and test sets
+2024-10-10 19:05:29,026 - custom_logger - INFO - X_train shape: (1279, 11), y_train shape: (1279,)
+2024-10-10 19:05:29,026 - custom_logger - INFO - X_test shape: (320, 11), y_test shape: (320,)
+2024-10-10 19:05:29,026 - custom_logger - INFO - >>>>> stage Data Transformation stage completed <<<<<
+
+x=======x
+2024-10-10 19:05:29,195 - custom_logger - INFO - Custom logger module initialized.
+2024-10-10 19:05:31,007 - custom_logger - INFO - >>>>> stage Model trainer stage started <<<<<
+2024-10-10 19:05:31,010 - custom_logger - INFO - yaml file: src/config.yaml loaded successfully
+2024-10-10 19:05:31,010 - custom_logger - INFO - yaml file: src/models_module_def/params.yaml loaded successfully
+2024-10-10 19:05:31,012 - custom_logger - INFO - yaml file: src/data_module_def/schema.yaml loaded successfully
+2024-10-10 19:05:31,012 - custom_logger - INFO - created directory at: models
+2024-10-10 19:05:31,020 - custom_logger - INFO - >>>>> stage Model trainer stage completed <<<<< 
+
+ x========x
+2024-10-10 19:05:31,159 - custom_logger - INFO - Custom logger module initialized.
+2024-10-10 19:05:38,043 - httpx - INFO - HTTP Request: POST https://dagshub.com/login/oauth/middleman "HTTP/1.1 200 OK"
+2024-10-10 19:05:38,220 - httpx - INFO - HTTP Request: POST https://dagshub.com/login/oauth/access_token "HTTP/1.1 200 OK"
+2024-10-10 19:05:38,390 - httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+2024-10-10 19:05:38,394 - dagshub - INFO - Accessing as ssime-git
+2024-10-10 19:05:38,631 - httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/ssime-git/masterclass_overview_mlops_wine_quality_student "HTTP/1.1 200 OK"
+2024-10-10 19:05:38,635 - dagshub - INFO - Initialized MLflow to track repo "ssime-git/masterclass_overview_mlops_wine_quality_student"
+2024-10-10 19:05:38,636 - dagshub - INFO - Repository ssime-git/masterclass_overview_mlops_wine_quality_student initialized!
+2024-10-10 19:05:38,636 - custom_logger - INFO - >>>>> stage Model evaluation stage started <<<<<
+2024-10-10 19:05:38,639 - custom_logger - INFO - yaml file: src/config.yaml loaded successfully
+2024-10-10 19:05:38,640 - custom_logger - INFO - yaml file: src/models_module_def/params.yaml loaded successfully
+2024-10-10 19:05:38,642 - custom_logger - INFO - yaml file: src/data_module_def/schema.yaml loaded successfully
+2024-10-10 19:05:38,642 - custom_logger - INFO - created directory at: metrics
+2024-10-10 19:05:39,001 - custom_logger - INFO - json file saved at: metrics/metrics.json
+2024-10-10 19:05:44,662 - custom_logger - INFO - >>>>> stage Model evaluation stage completed <<<<< 
+
+ x========x
