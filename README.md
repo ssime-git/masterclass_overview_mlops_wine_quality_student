@@ -5,70 +5,74 @@ Welcome to the setup guide! Here, we'll outline the steps needed to configure an
 You can start by getting familiar with the architecture of the project: 
 
 ```bash
-+---.dvc
-|  
-+---.github
-|   \---workflows
-+---data
-|           
-+---logs
-|       
-+---metrics
-+---notebooks
-|       workflow_steps.ipynb
-|       
-+---src
-|   |   common_utils.py
-|   |   config.py
-|   |   config.yaml
-|   |   config_manager.py
-|   |   entity.py
-|   |   __init__.py
-|   |   
-|   +---app
-|   |       app.py
-|   |       
-|   +---data_module_def
-|   |   |   data_ingestion.py
-|   |   |   data_transformation.py
-|   |   |   data_validation.py
-|   |   |   schema.yaml
-|   |   |   __init__.p
-|   |           
-|   +---models_module_def
-|   |       model_evaluation.py
-|   |       model_trainer.py
-|   |       params.yaml
-|   |       __init__.py
-|   |       
-|   +---pipeline_steps
-|   |       prediction.py
-|   |       stage01_data_ingestion.py
-|   |       stage02_data_validation.py
-|   |       stage03_data_transformation.py
-|   |       stage04_model_trainer.py
-|   |       stage05_model_evaluation.py
-|   |       __init__.py
-|           
-+---templates
-|       index.html
-|       login.html
-|       register.html
-|       results.html
-|       
-+---users
-|   |   users.json
-| 
-|   .dvcignore
-|   .gitignore
-|   custom_logger.py
-|   dvc.lock
-|   dvc.yaml
-|   README.md
-|   requirements.txt
-|   tree
-|   __init__.py
-|  
+.
+├── Makefile
+├── README.md
+├── __init__.py
+├── __pycache__
+│   ├── custom_logger.cpython-311.pyc
+│   └── custom_logger.cpython-312.pyc
+├── custom_logger.py
+├── data
+│   ├── processed
+│   │   ├── X_test.csv
+│   │   ├── X_train.csv
+│   │   ├── y_test.csv
+│   │   └── y_train.csv
+│   ├── raw
+│   │   ├── data.zip
+│   │   └── winequality-red.csv
+│   └── status.txt
+├── dvc.lock
+├── dvc.yaml
+├── logs
+│   └── logs.log
+├── metrics
+│   └── metrics.json
+├── models
+│   └── model.joblib
+├── notebooks
+│   └── workflow_steps.ipynb
+├── requirements.txt
+├── src
+│   ├── __init__.py
+│   ├── app
+│   │   └── app.py
+│   ├── common_utils.py
+│   ├── config.py
+│   ├── config.yaml
+│   ├── config_manager.py
+│   ├── data_module_def
+│   │   ├── __init__.py
+│   │   │   ├── data_ingestion.cpython-311.pyc
+│   │   │   ├── data_ingestion.cpython-312.pyc
+│   │   │   ├── data_transformation.cpython-312.pyc
+│   │   │   └── data_validation.cpython-312.pyc
+│   │   ├── data_ingestion.py
+│   │   ├── data_transformation.py
+│   │   ├── data_validation.py
+│   │   └── schema.yaml
+│   ├── entity.py
+│   ├── models_module_def
+│   │   ├── __init__.py
+│   │   ├── model_evaluation.py
+│   │   ├── model_trainer.py
+│   │   └── params.yaml
+│   └── pipeline_steps
+│       ├── __init__.py
+│       ├── prediction.py
+│       ├── stage01_data_ingestion.py
+│       ├── stage02_data_validation.py
+│       ├── stage03_data_transformation.py
+│       ├── stage04_model_trainer.py
+│       └── stage05_model_evaluation.py
+├── templates
+│   ├── index.html
+│   ├── login.html
+│   ├── register.html
+│   └── results.html
+└── users
+    └── users.json
 ```
 Through this project we'll work with a wine dataset 🍷 The goal will be to implement a model that will predict its quality, all while adhering to the best practices in MLOps in terms of version control, use of pipelines and the most commonly used tools.
 
@@ -204,3 +208,12 @@ You can run the pipeline through the command `dvc repro`.
 Congratulations! 🎉 Now that you have a structured and well-defined MLOps project you're ready for the next step which is the creation of the API.
 
 Each step is modularized, making it easy to maintain, extend, and scale your Machine Learning pipeline. 
+
+Don't forget to commit your changes and push them to your GitHub repository.
+```sh
+git add .
+git commit -m "commit message"
+git push
+dvc commit
+dvc push
+```
