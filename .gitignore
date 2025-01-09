@@ -5,3 +5,4 @@ devserver.sh
 main.py
 data/
 */__pycache__/*
+*/*/__pycache__/*.pyc

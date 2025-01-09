@@ -84,6 +84,12 @@ Finally, you must create a virtual environment `.venv`where you'll install all t
 > 📚 Make sure you activate your virtual environment before you use it 😉.
 > If you have an error, you can remove the versions specified in the `requirements.txt` file.
 
+Then you can connect your local repo to `DVC` with the commmand.
+
+```bash
+make dvc-setup
+```
+
 Now let's go through the files that are readily available.
 
 ## Configuration Files 📘
@@ -187,11 +193,7 @@ Start by setting DagsHub as your distant storage through DVC.
 > you can find the command to execute on dagshub account `remote > data > dvc >s3`
 
 ```bash
-	dvc remote add origin s3://dvc --force
-	dvc remote modify origin endpointurl https://dagshub.com/ssime-git/masterclass_overview_mlops_wine_quality_student.s3
-	dvc remote default origin
-	dvc remote modify origin --local access_key_id <your_access_key_id>
-	dvc remote modify origin --local secret_access_key <your_secret_access_key>
+make dvc-setup
 ```
 
 Use dvc to connect the different steps of your pipeline.

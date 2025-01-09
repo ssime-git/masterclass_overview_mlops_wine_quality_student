@@ -191,3 +191,79 @@ x=======x
 2024-10-10 19:05:44,662 - custom_logger - INFO - >>>>> stage Model evaluation stage completed <<<<< 
 
  x========x
+2025-01-09 19:09:55,367 - custom_logger - INFO - Custom logger module initialized.
+2025-01-09 19:09:59,338 - custom_logger - INFO - Parent folder: /Users/seb/Documents/masterclass_overview_mlops_wine_quality_student
+2025-01-09 19:09:59,338 - custom_logger - INFO - >>>>> stage Data Ingestion stage started <<<<<
+2025-01-09 19:09:59,339 - custom_logger - INFO - yaml file: src/config.yaml loaded successfully
+2025-01-09 19:09:59,340 - custom_logger - INFO - yaml file: src/models_module_def/params.yaml loaded successfully
+2025-01-09 19:09:59,341 - custom_logger - INFO - yaml file: src/data_module_def/schema.yaml loaded successfully
+2025-01-09 19:09:59,341 - custom_logger - INFO - created directory at: data/raw
+2025-01-09 19:09:59,898 - custom_logger - INFO - data/raw/data.zip download! With following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: CEC2:1CACF2:E7CF4:EF763:678010F6
+Accept-Ranges: bytes
+Date: Thu, 09 Jan 2025 18:09:59 GMT
+Via: 1.1 varnish
+X-Served-By: cache-par-lfpg1960057-PAR
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1736446200.642792,VS0,VE207
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 8e52d38a64f693e180b9c0c8dd95917099f1cc4c
+Expires: Thu, 09 Jan 2025 18:14:59 GMT
+Source-Age: 0
+
+
+2025-01-09 19:09:59,904 - custom_logger - INFO - >>>>> stage Data Ingestion stage completed <<<<<
+
+x=======x
+2025-01-09 19:10:00,099 - custom_logger - INFO - Custom logger module initialized.
+2025-01-09 19:10:13,764 - custom_logger - INFO - >>>>> stage Data Validation stage started <<<<<
+2025-01-09 19:10:13,765 - custom_logger - INFO - yaml file: src/config.yaml loaded successfully
+2025-01-09 19:10:13,765 - custom_logger - INFO - yaml file: src/models_module_def/params.yaml loaded successfully
+2025-01-09 19:10:13,766 - custom_logger - INFO - yaml file: src/data_module_def/schema.yaml loaded successfully
+2025-01-09 19:10:13,766 - custom_logger - INFO - created directory at: data
+2025-01-09 19:10:13,772 - custom_logger - INFO - >>>>> stage Data Validation stage completed <<<<<
+
+x=======x
+2025-01-09 19:10:14,025 - custom_logger - INFO - Custom logger module initialized.
+2025-01-09 19:10:38,652 - custom_logger - INFO - >>>>> stage Data Transformation stage started <<<<<
+2025-01-09 19:10:38,654 - custom_logger - INFO - yaml file: src/config.yaml loaded successfully
+2025-01-09 19:10:38,654 - custom_logger - INFO - yaml file: src/models_module_def/params.yaml loaded successfully
+2025-01-09 19:10:38,655 - custom_logger - INFO - yaml file: src/data_module_def/schema.yaml loaded successfully
+2025-01-09 19:10:38,655 - custom_logger - INFO - created directory at: data/processed
+2025-01-09 19:10:38,676 - custom_logger - INFO - Splitted data into training and test sets
+2025-01-09 19:10:38,676 - custom_logger - INFO - X_train shape: (1279, 11), y_train shape: (1279,)
+2025-01-09 19:10:38,676 - custom_logger - INFO - X_test shape: (320, 11), y_test shape: (320,)
+2025-01-09 19:10:38,677 - custom_logger - INFO - >>>>> stage Data Transformation stage completed <<<<<
+
+x=======x
+2025-01-09 19:10:39,058 - custom_logger - INFO - Custom logger module initialized.
+2025-01-09 19:10:49,464 - httpx - INFO - HTTP Request: POST https://dagshub.com/login/oauth/middleman "HTTP/1.1 200 OK"
+2025-01-09 19:10:49,624 - httpx - INFO - HTTP Request: POST https://dagshub.com/login/oauth/access_token "HTTP/1.1 200 OK"
+2025-01-09 19:10:49,786 - httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+2025-01-09 19:10:49,790 - dagshub - INFO - Accessing as ssime-git
+2025-01-09 19:10:49,997 - httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/ssime-git/masterclass_overview_mlops_wine_quality_student "HTTP/1.1 200 OK"
+2025-01-09 19:10:50,159 - httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+2025-01-09 19:10:50,160 - dagshub - INFO - Initialized MLflow to track repo "ssime-git/masterclass_overview_mlops_wine_quality_student"
+2025-01-09 19:10:50,161 - dagshub - INFO - Repository ssime-git/masterclass_overview_mlops_wine_quality_student initialized!
+2025-01-09 19:10:50,162 - custom_logger - INFO - >>>>> stage Model evaluation stage started <<<<<
+2025-01-09 19:10:50,165 - custom_logger - INFO - yaml file: src/config.yaml loaded successfully
+2025-01-09 19:10:50,166 - custom_logger - INFO - yaml file: src/models_module_def/params.yaml loaded successfully
+2025-01-09 19:10:50,167 - custom_logger - INFO - yaml file: src/data_module_def/schema.yaml loaded successfully
+2025-01-09 19:10:50,168 - custom_logger - INFO - created directory at: metrics
+2025-01-09 19:10:53,351 - custom_logger - INFO - json file saved at: metrics/metrics.json
+2025-01-09 19:11:01,336 - custom_logger - INFO - >>>>> stage Model evaluation stage completed <<<<< 
+
+ x========x
